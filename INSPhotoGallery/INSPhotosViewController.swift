@@ -220,12 +220,12 @@ public class INSPhotosViewController: UIViewController, UIPageViewControllerData
      - parameter photo:    The photo to make the currently displayed photo.
      - parameter animated: Whether to animate the transition to the new photo.
      */
-    public func changeToPhoto(photo: INSPhotoViewable, animated: Bool) {
+    public func changeToPhoto(photo: INSPhotoViewable, direction: UIPageViewControllerNavigationDirection, animated: Bool) {
         if !dataSource.containsPhoto(photo) {
             return
         }
         let photoViewController = initializePhotoViewControllerForPhoto(photo)
-        pageViewController.setViewControllers([photoViewController], direction: .Forward, animated: animated, completion: nil)
+        pageViewController.setViewControllers([photoViewController], direction: direction, animated: animated, completion: nil)
         updateCurrentPhotosInformation()
     }
     
