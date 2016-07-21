@@ -162,7 +162,7 @@ public class INSPhotosViewController: UIViewController, UIPageViewControllerData
         view.backgroundColor = UIColor.blackColor()
         pageViewController.view.backgroundColor = UIColor.clearColor()
         
-        pageViewController.view.addGestureRecognizer(panGestureRecognizer)
+//        pageViewController.view.addGestureRecognizer(panGestureRecognizer)
         pageViewController.view.addGestureRecognizer(singleTapGestureRecognizer)
         
         addChildViewController(pageViewController)
@@ -340,7 +340,7 @@ public class INSPhotosViewController: UIViewController, UIPageViewControllerData
     
     // MARK: - UIViewControllerTransitioningDelegate
     
-    public func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    /*public func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transitionAnimator.dismissing = false
         return transitionAnimator
     }
@@ -360,7 +360,7 @@ public class INSPhotosViewController: UIViewController, UIPageViewControllerData
             return interactiveAnimator
         }
         return nil
-    }
+    }*/
     
     // MARK: - UIResponder
     
